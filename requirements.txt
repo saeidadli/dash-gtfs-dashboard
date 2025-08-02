@@ -4,4 +4,4 @@ plotly
 pandas
 geopandas
 shapely
-gtfs_kit
+gtfs-kit==6.1.1
