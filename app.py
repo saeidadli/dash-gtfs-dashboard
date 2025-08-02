@@ -1,4 +1,5 @@
-﻿import gtfs_kit as gk
+﻿import os
+import gtfs_kit as gk
 from dash import Dash, html, dcc, Input, Output, callback, State, ALL
 import dash_leaflet as dl
 import plotly.express as px
@@ -376,4 +377,5 @@ app.index_string = '''
 '''
 
 if __name__ == '__main__':
-    app.run(debug=False, port=10000)
+    port = int(os.environ.get("PORT", 8050))
+    app.run(host="0.0.0.0", port=port)
