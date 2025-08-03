@@ -269,7 +269,7 @@ app.layout = html.Div([
     # Stats cards
     html.Div([
         html.Div([
-            html.Div("ðﾟﾚﾌ", style={'font-size': '2rem', 'margin-bottom': '10px'}),
+            html.Div("🚌", style={'font-size': '2rem', 'margin-bottom': '10px'}),
             html.H2(f"{feed_stats['num_routes'][0]}", style={'margin': '0', 'color': '#2c3e50', 'font-size': '2.5rem'}),
             html.P("Routes", style={'margin': '5px 0', 'color': '#7f8c8d', 'font-weight': 'bold'})
         ], className='stat-card'),
@@ -281,19 +281,19 @@ app.layout = html.Div([
         ], className='stat-card'),
         
         html.Div([
-            html.Div("ðﾟﾓﾏ", style={'font-size': '2rem', 'margin-bottom': '10px'}),
+            html.Div("📏", style={'font-size': '2rem', 'margin-bottom': '10px'}),
             html.H2(f"{feed_stats['service_distance'][0]/1000:.0f}", style={'margin': '0', 'color': '#2c3e50', 'font-size': '2.5rem'}),
             html.P("Distance (km)", style={'margin': '5px 0', 'color': '#7f8c8d', 'font-weight': 'bold'})
         ], className='stat-card'),
         
         html.Div([
-            html.Div("ðﾟﾚﾏ", style={'font-size': '2rem', 'margin-bottom': '10px'}),
+            html.Div("🚏", style={'font-size': '2rem', 'margin-bottom': '10px'}),
             html.H2(f"{feed_stats['num_stops'][0]}", style={'margin': '0', 'color': '#2c3e50', 'font-size': '2.5rem'}),
             html.P("Stops", style={'margin': '5px 0', 'color': '#7f8c8d', 'font-weight': 'bold'})
         ], className='stat-card'),
         
         html.Div([
-            html.Div("ðﾟﾚﾊ", style={'font-size': '2rem', 'margin-bottom': '10px'}),
+            html.Div("🚊", style={'font-size': '2rem', 'margin-bottom': '10px'}),
             html.H2(f"{feed_stats['num_trips'][0]}", style={'margin': '0', 'color': '#2c3e50', 'font-size': '2.5rem'}),
             html.P("Daily Trips", style={'margin': '5px 0', 'color': '#7f8c8d', 'font-weight': 'bold'})
         ], className='stat-card')
@@ -301,7 +301,7 @@ app.layout = html.Div([
     
     # Map section
     html.Div([
-        html.H2("ðﾟﾗﾺ️ Interactive Transit Map", style={'color': '#2c3e50', 'margin-bottom': '20px', 'text-align': 'center'}),
+        html.H2("🗺️ Interactive Transit Map", style={'color': '#2c3e50', 'margin-bottom': '20px', 'text-align': 'center'}),
         html.P("Click routes or stops for details. Stops appear when zoomed in.", 
                style={'text-align': 'center', 'color': '#7f8c8d', 'margin-bottom': '20px'}),
         create_map()
