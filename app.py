@@ -259,7 +259,7 @@ def create_trip_chart():
 app.layout = html.Div([
     # Header
     html.Div([
-        html.H1("ðﾟﾚﾌ Auckland Public Transport Dashboard", 
+        html.H1("🚌 Auckland Public Transport Dashboard", 
                 style={'color': 'white', 'margin': '0', 'font-size': '2.5rem', 'text-shadow': '2px 2px 4px rgba(0,0,0,0.3)'})
     ], style={
         'background': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
