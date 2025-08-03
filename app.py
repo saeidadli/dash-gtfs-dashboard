@@ -309,32 +309,48 @@ app.layout = html.Div([
     
     # Charts section
     html.Div([
-        # Trip timeline
+    # Trip timeline (full width)
         html.Div([
             dcc.Graph(figure=create_trip_chart())
-        ], style={'background': 'white', 'border-radius': '15px', 'padding': '20px', 'box-shadow': '0 4px 15px rgba(0,0,0,0.1)', 'margin-bottom': '30px'}),
-        
-        # Side by side charts
+        ], style={
+            'background': 'white',
+            'border-radius': '15px',
+            'padding': '20px',
+            'box-shadow': '0 4px 15px rgba(0,0,0,0.1)',
+            'margin-bottom': '30px'
+        }),
+
+        # Responsive side-by-side charts
         html.Div([
             html.Div([
                 dcc.Graph(figure=create_top_routes_chart())
-            ], style={'width': '48%', 'background': 'white', 'border-radius': '15px', 'padding': '20px', 'box-shadow': '0 4px 15px rgba(0,0,0,0.1)'}),
-            
+            ], style={
+                'flex': '1',
+                'min-width': '300px',
+                'background': 'white',
+                'border-radius': '15px',
+                'padding': '20px',
+                'box-shadow': '0 4px 15px rgba(0,0,0,0.1)',
+                'margin': '10px'
+            }),
+
             html.Div([
                 dcc.Graph(figure=create_top_stops_chart())
-            ], style={'width': '48%', 'background': 'white', 'border-radius': '15px', 'padding': '20px', 'box-shadow': '0 4px 15px rgba(0,0,0,0.1)'})
-        ], style={'display': 'flex', 'justify-content': 'space-between', 'margin-bottom': '30px'}),
-        
-        # Route types chart
-        # html.Div([
-        #     dcc.Graph(
-        #         figure=px.bar(
-        #             route_stats.groupby('route_desc').size().reset_index(name='count'),
-        #             x='route_desc', y='count',
-        #             title='Routes by Type'
-        #         ).update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-        #     )
-        # ], style={'background': 'white', 'border-radius': '15px', 'padding': '20px', 'box-shadow': '0 4px 15px rgba(0,0,0,0.1)'})
+            ], style={
+                'flex': '1',
+                'min-width': '300px',
+                'background': 'white',
+                'border-radius': '15px',
+                'padding': '20px',
+                'box-shadow': '0 4px 15px rgba(0,0,0,0.1)',
+                'margin': '10px'
+            }),
+        ], style={
+            'display': 'flex',
+            'flex-wrap': 'wrap',
+            'justify-content': 'space-between',
+            'margin-bottom': '30px'
+        }),
     ], style={'margin': '0 20px'})
 ], style={
     'background': 'linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%)',
